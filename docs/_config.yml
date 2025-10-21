@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: Modbus Hub
+description: Modbus TCP Simulator with GUI (PySide6 + pymodbusTCP)
+show_downloads: true
