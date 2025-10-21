@@ -1,8 +1,11 @@
-# ⚙️ Modbus Hub
+# ⚙️ Modbus Hub  
 ### Simulador completo de Modbus TCP con interfaz gráfica (Maestro y Esclavo)
 
 > **Tecnologías:** Python 3.10+, **PySide6** (Qt for Python), **pymodbusTCP**, **uv** (gestor de entornos y paquetes)  
 > **Alcance:** Solo **Modbus TCP** (sin RTU en esta versión).  
+
+📘 [**Documentación Web (GitHub Pages)**](https://jcespitia.github.io/modbus-hub/)  
+⬇️ [**Descargar última versión**](https://github.com/jcespitia/modbus-hub/releases/latest)
 
 ---
 
@@ -68,7 +71,7 @@ modbus-hub/
 Este proyecto usa [**uv**](https://github.com/astral-sh/uv) para crear entornos reproducibles de forma rápida.  
 También puedes usar un entorno virtual estándar con `python -m venv`, pero **uv** es recomendado.
 
-### 1) Instalar `uv`
+### 1️⃣ Instalar `uv`
 ```bash
 # Opción A: vía pip
 pip install uv
@@ -77,7 +80,7 @@ pip install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### 2) Crear entorno virtual e instalar dependencias
+### 2️⃣ Crear entorno virtual e instalar dependencias
 Desde la raíz del proyecto (`modbus-hub/`):
 ```bash
 uv sync
@@ -100,14 +103,14 @@ Activar el entorno (si no usas `uv run`):
 
 ## ▶️ Ejecución
 
-### 1) Iniciar el Esclavo (Servidor)
+### 🟩 Iniciar el Esclavo (Servidor)
 ```bash
 uv run python slave/slave_app.py
 ```
 - Elige la **IP** (ej. `0.0.0.0`) y el **Puerto** (ej. `502` o `1502` sin permisos de admin/root).
 - Haz clic en **Start Server** → el LED se enciende 🟢 y el log muestra el punto de enlace.
 
-### 2) Iniciar el Maestro (Cliente)
+### 🟦 Iniciar el Maestro (Cliente)
 ```bash
 uv run python master/master_app.py
 ```
@@ -164,21 +167,11 @@ Ambas aplicaciones incluyen validaciones estrictas con **QMessageBox** para most
 
 ---
 
-## 🧱 Arquitectura interna
+## 🌐 Enlaces útiles
 
-- **Hilos:** el servidor (`Slave`) corre en un hilo daemon, manteniendo la UI fluida.  
-- **Temporizadores:** Maestro → 2 s, Esclavo → 1 s.  
-- **Sincronización:** el Esclavo comparte el mismo `DataBank` que el servidor TCP.  
-- **Manejo de errores:** fallos de comunicación generan popups y desconexiones seguras.
-
----
-
-## 🔬 Solución de problemas
-
-- **Error al usar puerto 502:** usa un puerto alto (ej. 1502).  
-- **El Maestro siempre lee ceros:** verifica IP/puerto y que el Esclavo esté activo.  
-- **Los valores editados se borran:** asegúrate de editar la columna `Value`, no `Address`.  
-- **Firewall:** habilita el puerto TCP correspondiente.
+- 🌍 **Documentación web:** [https://jcespitia.github.io/modbus-hub/](https://jcespitia.github.io/modbus-hub/)
+- 📦 **Releases / Ejecutables:** [https://github.com/jcespitia/modbus-hub/releases](https://github.com/jcespitia/modbus-hub/releases)
+- 🧩 **Código fuente:** [https://github.com/jcespitia/modbus-hub](https://github.com/jcespitia/modbus-hub)
 
 ---
 
@@ -194,23 +187,7 @@ Ambas aplicaciones incluyen validaciones estrictas con **QMessageBox** para most
 
 ---
 
-## 🤝 Contribuciones
-
-1. Haz un *fork* del repositorio.  
-2. Crea una rama de características:  
-   ```bash
-   git checkout -b feat/mi-cambio
-   ```
-3. Realiza *commits* claros:  
-   ```bash
-   git commit -m "Agrega validaciones de IP"
-   ```
-4. Abre un *Pull Request* con descripción y capturas de pantalla si es necesario.
-
-> Mantén los textos de la UI en **inglés** y los comentarios en **español**.
-
----
-
 ## 📄 Licencia
 
-**Licencia MIT** — uso libre para educación, pruebas o proyectos comerciales con atribución.
+**Licencia MIT** — uso libre para educación, pruebas o proyectos comerciales con atribución.  
+Desarrollado por **Camilo Espitia** 💻  
