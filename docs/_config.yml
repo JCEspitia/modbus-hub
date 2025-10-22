@@ -1,4 +1,22 @@
-theme: jekyll-theme-cayman
-title: Modbus Hub
-description: Modbus TCP Simulator with GUI (PySide6 + pymodbusTCP)
-show_downloads: true
+title: "Modbus Hub"
+description: "Complete Modbus TCP Simulator with GUI (Master & Slave)"
+theme: jekyll-theme-hacker
+markdown: kramdown
+
+# Author info
+author:
+  name: "Camilo Espitia"
+  github: "https://github.com/jcespitia"
+
+# Branding
+logo: "assets/icons/master/icon_master.png"
+favicon: "assets/icons/master/icon_master.png"
+
+# navigation
+nav:
+  - title: "Home"
+    url: /
+  - title: "Docs"
+    url: /docs/
+  - title: "Releases"
+    url: https://github.com/jcespitia/modbus-hub/releases
