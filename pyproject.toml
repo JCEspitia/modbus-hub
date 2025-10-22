@@ -7,3 +7,8 @@ dependencies = [
     "pymodbustcp>=0.3.0",
     "pyside6>=6.10.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.16.0",
+]
