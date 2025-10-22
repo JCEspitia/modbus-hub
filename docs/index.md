@@ -1,8 +1,8 @@
 # ⚙️ Modbus Hub
 
 <p align="center">
-  <img src="assets/icons/master/icon_master.png" alt="Master Logo" width="120" style="margin-right: 20px;"/>
-  <img src="assets/icons/slave/icon_slave.png" alt="Slave Logo" width="120"/>
+  <img src="images/icon_master.png" alt="Master Logo" width="120" style="margin-right: 20px;"/>
+  <img src="images/icon_slave.png" alt="Slave Logo" width="120"/>
 </p>
 
 <h3 align="center">
@@ -40,22 +40,43 @@ featuring two standalone GUI applications built with **PySide6 (Qt for Python)**
 
 ---
 
-## ⚙️ Installation
+## ▶️ Usage
 
-```bash
-pip install pyside6 pymodbusTCP
-git clone https://github.com/jcespitia/modbus-hub.git
-cd modbus-hub
-```
+The project includes two standalone applications ready to run:
+
+- **Modbus Hub – Master** (Client)
+- **Modbus Hub – Slave** (Server)
+
+Simply execute the provided file for your platform.  
+No installation or dependency setup is required.
 
 ---
 
-## ▶️ Usage
+## 💾 Executables
 
-```bash
-python slave/slave_app.py
-python master/master_app.py
-```
+The binaries are distributed in compressed packages by platform:
+
+| Platform       | Package Name                            | Description                                |
+|----------------|-----------------------------------------|--------------------------------------------|
+| 🪟 **Windows** | `ModbusHub_Windows_Binaries_v0.1.0.zip` | Contains both Master and Slave executables |
+| 🐧 **Linux**   | `ModbusHub_Linux_Binaries_v0.1.0.zip`   | Contains both Master and Slave executables |
+
+Each package includes:
+
+- `MasterApp` and `SlaveApp` executables.
+- Configuration files and internal resources.
+- Ready-to-run structure — no additional setup required.
+
+---
+
+## 📸 Screenshots
+
+| Application               | Preview                                                                  |
+|---------------------------|--------------------------------------------------------------------------|
+| 🟦 **MasterApp (Client)** | <img src="images/master_ui.png" alt="MasterApp Screenshot" width="600"/> |
+| 🟩 **SlaveApp (Server)**  | <img src="images/slave_ui.png" alt="SlaveApp Screenshot" width="600"/>   |
+
+*(Screenshots are for demonstration; actual UI may vary slightly depending on platform.)*
 
 ---
 
@@ -67,16 +88,6 @@ python master/master_app.py
 | Registers per request | ≤ 125                                |
 | Function Codes        | 03 (Read Holding), 06 (Write Single) |
 | Data Type             | Unsigned 16-bit integer              |
-
----
-
-## 💾 Downloads
-
-| Platform   | File                                                                        | Description           |
-|------------|-----------------------------------------------------------------------------|-----------------------|
-| 🪟 Windows | [modbus-hub-win64.exe](https://github.com/jcespitia/modbus-hub/releases)    | Standalone executable |
-| 🐧 Linux   | [modbus-hub-linux.tar.gz](https://github.com/jcespitia/modbus-hub/releases) | Binary build          |
-| 💻 Source  | [GitHub Repository](https://github.com/jcespitia/modbus-hub)                | Full source code      |
 
 ---
 
@@ -150,7 +161,7 @@ img {
 </style>
 
 <script>
-const text = "💀 Modbus Hub – Modbus TCP Simulator (Master & Slave)";
+const text = "Modbus Hub – Modbus TCP Simulator (Master & Slave)";
 let i = 0;
 function typing() {
   if (i < text.length) {
